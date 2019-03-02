@@ -1,6 +1,6 @@
 # Deploying Deep Learning Models on Smartphones
 
-![Android Demo](https://drive.google.com/open?id=1271bWPm0ZTyCTpNKi2Oimn_s_QNJmkeA)
+![Android Demo](https://media.giphy.com/media/nlu9UgCsFjArtSnxcy/giphy.gif)
 
 This GitHub repository is the code accompaniment of the following paper:
 > **"Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps"**<br>
