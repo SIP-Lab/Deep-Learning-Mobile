@@ -1,5 +1,7 @@
 # Deploying Deep Learning Models on Smartphones
 
+![Android Demo](https://drive.google.com/open?id=1271bWPm0ZTyCTpNKi2Oimn_s_QNJmkeA)
+
 This GitHub repository is the code accompaniment of the following paper:
 > **"Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps"**<br>
 > Abhishek Sehgal and Nasser Kehtarnavaz, The University of Texas at Dallas<br>
@@ -16,3 +18,10 @@ All material related to our paper is available via the following links:
 |https://arxiv.org/abs/1901.02144| arXiv version of Manuscript
 |https://www.mdpi.com/2504-4990/1/1/27| MDPI version of Manuscript
 |http://www.utdallas.edu/~kehtar/DNN-apps-demo.mp4| Video of the deep learning models on the Android and iOS Smartphones
+
+## Getting Started
+These codes contain python notebooks that will guide you through the process of converting the pre-trained model into smartphone-required model files, Android Studio project for deploying the models on android devices and Xcode project for deploying the models on iOS devices.
+
+## Prerequisites
+
+As Python is the de-facto coding language used for TensorFlow and Keras, we used Anaconda. The Anaconda environments used for the development of this repository can be duplicated by running the following code:
