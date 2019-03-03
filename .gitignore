@@ -1,0 +1,9 @@
+# All the model generated files
+
+*.h5
+*.pb
+*.mlmodel
+*.tflite
+
+# All the jupyter notebook checkpoints
+.ipynb_checkpoints

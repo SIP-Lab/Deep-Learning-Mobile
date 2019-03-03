@@ -1,7 +1,5 @@
 # Deploying Deep Learning Models on Smartphones
 
-![](https://media.giphy.com/media/nlu9UgCsFjArtSnxcy/giphy.gif)
-
 This GitHub repository is the code accompaniment of the following paper:
 > **"Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps"**<br>
 > Abhishek Sehgal and Nasser Kehtarnavaz, The University of Texas at Dallas<br>
