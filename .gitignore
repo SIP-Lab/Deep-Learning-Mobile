@@ -7,3 +7,6 @@
 
 # All the jupyter notebook checkpoints
 .ipynb_checkpoints
+
+# Mac finder specific files
+.DS_Store
