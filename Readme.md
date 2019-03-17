@@ -22,4 +22,21 @@ These codes contain python notebooks that will guide you through the process of 
 
 ## Prerequisites
 
-As Python is the de-facto coding language used for TensorFlow and Keras, we used Anaconda. The Anaconda environments used for the development of this repository can be duplicated by running the following code:
+As Python is the de-facto coding language used for TensorFlow and Keras, we used Anaconda to manage the environment for creating mobile deployment models. The Anaconda environment used for the development of this repository can be duplicated by running the following code after installing [Anaconda](https://www.anaconda.com/distribution/):
+```
+conda env create -f Deep-Learning-Mobile.yml
+```
+The TensorFlow and Keras installed in this environment are the CPU version of the libraries. To install the GPU versions of these libraries, you can change it in the .yml file or update it after creating the environment.
+
+## Coding IDE
+
+The applications were developed using Xcode IDE for iOS and Android Studio for Android. For image processing OpenCV wrappers were used for both devices. On Android, the image capturing API used was also developed using OpenCV.
+
+To set up OpenCV for android, the following links were used:
+
+- https://opencv.org/platforms/android/
+- https://blog.codeonion.com/2016/04/09/show-camera-on-android-app-using-opencv-for-android/
+
+To set up OpenCV for iOS, the following links were used:
+- https://docs.opencv.org/2.4.13.7/doc/tutorials/introduction/ios_install/ios_install.html
+- https://medium.com/@dwayneforde/image-recognition-on-ios-with-swift-and-opencv-b5cf0667b79
