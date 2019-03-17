@@ -14,16 +14,11 @@ class ViewController: UIViewController, FrameExtractorDelegate {
     
     var frameExtractor: FrameExtractor!
     let openCVWrapper = OpenCVWrapper()
+    
+//    Update the model name here to which one you intend on using and its input image size
     let model = InceptionV3()
+    let inputSize: Int32 = 299
     var cgImage: CGImage!
-    
-    var frameCount = 0;
-    var movingAverageBuffer = MovingAverageBuffer(period: 10)
-    
-    var nFramesPredicted = 0
-    var startTime: DispatchTime!
-    var endTime: DispatchTime!
-    var elapsedTime: UInt64?
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -39,69 +34,30 @@ class ViewController: UIViewController, FrameExtractorDelegate {
         return label
     }
     
+    // This function loads the Frame Extractor class that extracts frames on the fly from the smartphone
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         frameExtractor = FrameExtractor()
         frameExtractor.delegate = self
-        //print(model.model.modelDescription.description)
-//        Timer.scheduledTimer(withTimeInterval: 0.7,
-//                                         repeats: true,
-//                                         block: {_ in
-//                                            guard let pixelBuffer = OpenCVWrapper.pixelBuffer(from: self.cgImage)?.takeRetainedValue() else {return}
-//                                            guard let output = try? self.model.prediction(image: pixelBuffer) else {return}
-//                                            let probs = output.classLabelProbs.sorted(by:{$0.value > $1.value})
-//                                            var label: String = ""
-//
-//                                            for index in 0...4 {
-//                                                label = label + "\(index+1). " + probs[index].key + " " + String(format: "%.0f%% \n", probs[index].value * 100)
-//                                            }
-//
-//                                            self.predictLabel.text = label
-//        })
-        
-        
-//        startTime = DispatchTime.now()
-//        DispatchQueue.global(qos: .background).async {
-//            while(true){
-//                if(self.cgImage != nil){
-//                    self.predict()
-//                }
-//            }
-//        }
-
     }
     
+    // This function preprocesses the image to the appropriate size for the Neural Network
+    // and then predicts the class
     func captured(image: UIImage) {
-        //autoreleasepool{
-            imageView.image = image
-            cgImage = openCVWrapper.preprocessImage(image, image_size: 299)?.cgImage
-//            self.predict()
-            DispatchQueue.global(qos: .background).async {
-                self.predict()
-//                self.nFramesPredicted += 1
-//                if self.nFramesPredicted == 100 {
-//                    self.endTime = DispatchTime.now()
-//                    self.elapsedTime = self.endTime.uptimeNanoseconds - self.startTime.uptimeNanoseconds
-//                    print("\(Double(self.elapsedTime!)/(100 * 1_000_000_000))")
-//                    self.nFramesPredicted = 0
-//                    self.startTime = DispatchTime.now()
-//                }
-            }
-//        }
-        
+        imageView.image = image
+        cgImage = openCVWrapper.preprocessImage(image, image_size: inputSize)?.cgImage
+        DispatchQueue.global(qos: .background).async {
+            self.predict()
+        }
     }
     
     func predict() {
- //       autoreleasepool{
             let pixelBuffer = pixelBufferFromImage(image: cgImage)
             let output = try? model.prediction(image: pixelBuffer!)
-//            self.predictLabel.text = self.updateLabel((output?.classLabelProbs)!)
             DispatchQueue.main.async {
                 self.predictLabel.text = self.updateLabel((output?.classLabelProbs)!)
             }
-//        }
     }
 
     override func didReceiveMemoryWarning() {

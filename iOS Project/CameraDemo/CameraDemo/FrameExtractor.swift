@@ -1,11 +1,3 @@
-//
-//  FrameExtractor.swift
-//  CameraDemo
-//
-//  Created by Sehgal, Abhishek on 5/3/18.
-//  Copyright © 2018 Sehgal, Abhishek. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
@@ -13,12 +5,7 @@ protocol FrameExtractorDelegate: class {
     func captured(image: UIImage)
 }
 
-/*
- This file needs to do three things:
- 1. It should access the camera
- 2. It should be customizable (front/back, orientation, quality)
- 3. It should return every frame captured
- */
+
 class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "session queue")
