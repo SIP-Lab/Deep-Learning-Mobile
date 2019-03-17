@@ -29,10 +29,9 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     // Used for logging success or failure messages
     private static final String TAG = "OCVSample::Activity";
     private ImageInference imageInference;
-    private ImageInferenceLite imageInferenceLite;
 
-    private long startTime, elapsedTime, nFramesPredicted = 0;
-    private float framesProcessed;
+    // For TensorFlow Lite, Still in Beta
+    private ImageInferenceLite imageInferenceLite;
 
 
     private Thread thread = new Thread() {
@@ -42,8 +41,9 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
                 while(true) {
                     sleep(0);
                     labelsView.setText(imageInference.predict(data));
-//
-//                    //labelsView.setText(imageInferenceLite.predict(data));
+
+                    // For TensorFlow Lite; still in Beta
+                    //labelsView.setText(imageInferenceLite.predict(data));
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
             e.printStackTrace();
         }
 
+        // For TensorFlow Lite; Still in Beta
         //imageInferenceLite = new ImageInferenceLite(assetManager);
 
         thread.start();
