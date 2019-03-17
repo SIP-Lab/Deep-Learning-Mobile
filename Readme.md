@@ -40,3 +40,17 @@ To set up OpenCV for android, the following links were used:
 To set up OpenCV for iOS, the following links were used:
 - https://docs.opencv.org/2.4.13.7/doc/tutorials/introduction/ios_install/ios_install.html
 - https://medium.com/@dwayneforde/image-recognition-on-ios-with-swift-and-opencv-b5cf0667b79
+
+## Using the Projects
+
+### Android Studio Project
+- Clean the Project
+- Make sure that OpenCV has been built and added properly to the Project
+- Add the CNN model to use in the assets folder of the Project
+- Update the settings in the ImageInference.java file according to the model
+- If you are using a different set of labels, add the labels.txt file for that respective file
+
+### iOS Project
+- Build the OpenCV2 framework and add it to the main Project
+- Add the model to the project and update the model name and image size in the ViewController.swift files
+- Build the project
