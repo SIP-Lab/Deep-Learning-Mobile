@@ -60,4 +60,4 @@ The codes are licensed under MIT license.
 
 For any utilization of the code content of this repository, the following paper needs to be cited by the user:
 
-- A. Sehgal, and N. Kehtarnavaz, "Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps", Machine Learning and Knowledge Extraction 1, no. 1 ,450-465, 2019.
+- A. Sehgal, and N. Kehtarnavaz, "Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps", Machine Learning and Knowledge Extraction, no. 1 ,450-465, 2019.
