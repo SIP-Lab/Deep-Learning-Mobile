@@ -54,3 +54,10 @@ To set up OpenCV for iOS, the following links were used:
 - Build the OpenCV2 framework and add it to the main Project
 - Add the model to the project and update the model name and image size in the ViewController.swift files
 - Build the project
+
+## License and Citation
+The codes are licensed under MIT license.
+
+For any utilization of the code content of this repository, the following paper needs to be cited by the user:
+
+-A. Sehgal, and N. Kehtarnavaz, "Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps", Machine Learning and Knowledge Extraction 1, no. 1 ,450-465, 2019.
