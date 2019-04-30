@@ -2,7 +2,7 @@
 
 This GitHub repository is the code accompaniment of the following paper:
 > **Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps**<br>
-> Abhishek Sehgal and Nasser Kehtarnavaz, University of Texas at Dallas<br>
+> Abhishek Sehgal and Nasser Kehtarnavaz - University of Texas at Dallas<br>
 > https://arxiv.org/abs/1901.02144<br>
 > https://www.mdpi.com/2504-4990/1/1/27<br>
 >
@@ -58,6 +58,6 @@ To set up OpenCV for iOS, the following links are used:
 ## License and Citation
 The codes are licensed under MIT license.
 
-For any utilization of the code content of this repository, the following paper needs to be cited by the user:
+For any utilization of the code content of this repository, the following paper needs to get cited by the user:
 
 - A. Sehgal, and N. Kehtarnavaz, "Guidelines and Benchmarks for Deployment of Deep Learning Models on Smartphones as Real-Time Apps," Machine Learning and Knowledge Extraction, vol. 1, pp. 450-465, Feb 2019 (Open Access).
